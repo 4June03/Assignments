@@ -1,0 +1,10 @@
+
+
+.totalPrice{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid gray;
+    padding-top: 0.5rem;
+    font-weight: 700;
+    font-size: small;
+}
