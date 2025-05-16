@@ -22,8 +22,7 @@ export const CartPreview: FC<IcartPreview> = ({
   useEffect(()=>{
     loadCart();
   },[])
- 
-  
+   
 
   return (
     isShowPreviewCart && (

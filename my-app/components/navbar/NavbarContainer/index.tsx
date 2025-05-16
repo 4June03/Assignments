@@ -1,17 +1,14 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import NavbarMenu from "../NavbarMenu";
 import LoginButton from "../LoginButton";
 import { CartButton, NavBarLogo } from "..";
 import { CartPreview } from "@/components/cart";
+import { useCartContext } from "@/hooks/useCartContext";
 
 const NavbarContainer = () => {
   const [isSticky, setIsSticky] = useState(false);
-  const [isShowPreviewCart, setIsShowPreviewCart] = useState<boolean>(false);
-
-  const toggleShowPreviewCart = () => {
-    setIsShowPreviewCart((prev) => !prev);
-  };
+  const {isShowPreviewCart, toggleShowPreviewCart} = useCartContext();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,7 +38,7 @@ const NavbarContainer = () => {
         <>
           <div
             className="fixed inset-0 bg-black opacity-50 z-300 pointer-events-auto"
-            onClick={() => setIsShowPreviewCart(false)}
+            onClick={toggleShowPreviewCart}
           ></div>
           <CartPreview
             isShowPreviewCart={isShowPreviewCart}

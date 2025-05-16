@@ -1,7 +1,5 @@
-import { CartIem } from "@/app/api/cart/types";
-import axios from "axios";
-import { Product } from "@/app/products/type";
-import { toast } from "sonner";
+import { CartIem } from "./type";
+
 
 const BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 

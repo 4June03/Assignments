@@ -1,21 +1,15 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import { NavbarContainer } from "@/components/navbar";
-import { Toaster } from "sonner";
 import { CartProvider } from "@/components/cart";
+import { NavbarContainer } from "@/components/navbar";
+import type { Metadata, Viewport } from "next";
+import { Toaster } from "sonner";
+import "./globals.css";
 
 // import NavbarButton from "@/components/navbar1/NavbarButton";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1
+};
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -29,9 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-[200vh]`}
-      >
+      <body className="antialiased min-h-[200vh]">
         <CartProvider>
           <NavbarContainer />
           <Toaster richColors />

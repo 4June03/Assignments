@@ -2,11 +2,11 @@
 
 import type React from "react";
 
-import { Minus, Plus } from "lucide-react";
-import { FC, useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useCartContext } from "@/hooks/useCartContext";
+import { Minus, Plus } from "lucide-react";
+import { FC, useState } from "react";
 
 interface QuantitySelectorProps {
   productId: string;
@@ -24,17 +24,16 @@ export const QuantitySelector: FC<QuantitySelectorProps> = ({
   const quantity = item?.quantity ?? min;
   const [tempValue, setTempValue] = useState(quantity.toString());
 
-  const handleIncrease = () => {
+  const increaseQuantity = () => {
     handleChangeQuantity("increase", productId);
-
     setTempValue((quantity + 1).toString());
   };
-  const handleDecrease = () => {
+  const decreaseQuantity = () => {
     handleChangeQuantity("decrease", productId);
     setTempValue((quantity - 1).toString());
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChanging = (e: React.ChangeEvent<HTMLInputElement>) => {
     setTempValue(e.target.value);
   };
 
@@ -55,7 +54,7 @@ export const QuantitySelector: FC<QuantitySelectorProps> = ({
         variant="outline"
         size="icon"
         className="h-8 w-8 rounded-r-none"
-        onClick={handleDecrease}
+        onClick={decreaseQuantity}
         disabled={quantity <= min}
       >
         <Minus className="h-3 w-3" />
@@ -67,14 +66,14 @@ export const QuantitySelector: FC<QuantitySelectorProps> = ({
         max={max}
         className="h-8 w-12 rounded-none border-x-0 text-center [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
         value={tempValue}
-        onChange={handleInputChange}
+        onChange={handleInputChanging}
         onBlur={handleBlur}
       />
       <Button
         variant="outline"
         size="icon"
         className="h-8 w-8 rounded-l-none"
-        onClick={handleIncrease}
+        onClick={increaseQuantity}
         disabled={quantity >= max}
       >
         <Plus className="h-3 w-3" />

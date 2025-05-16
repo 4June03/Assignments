@@ -43,7 +43,7 @@ const NavbarMenu:FC<NavbarMenuProps> = ({isSticky}) => {
     <IoMenu />
     </button>
 
-    <div className={`w-full fixed top-0 left-0 md:hidden h-screen flex flex-col gap-4 bg-black text-white px-4 pt-4 font-semibold transition-all duration-500 uppercase ${isOpen?'translate-x-0':'-translate-x-full'} `}>
+    <div className={`w-full fixed top-0 left-0 md:hidden h-screen flex flex-col gap-4 bg-black text-white px-4 pt-4 font-semibold transition-all duration-500 uppercase z-300 ${isOpen?'translate-x-0':'-translate-x-full'} `}>
         <div className='w-full flex justify-between'>
             <p>Menu</p>
             <span className='cursor-pointer font-bold hover:text-2xl transition-all' onClick={toggleSideBar}><GrClose />

@@ -11,4 +11,8 @@ export interface CartContextType {
   getCookiesData?: (key: string)=>any;
   setCookiesData?: (key:string, data: any, expireTime: number)=>void;
   handleChangeQuantity: (type:string, productId:string, value?:number) => void;
+  isShowPreviewCart: boolean;
+  toggleShowPreviewCart: () => void;
+  totalItems: number;
+  setTotalItems: (value: number) => void;
 }

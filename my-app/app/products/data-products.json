@@ -1,42 +1,42 @@
 [
-    {
-        "productId":"1",
-        "title": "Áo thun basic 1",
-        "description": "Áo thun cotton mỏng, thoáng mát, phù hợp ngày hè.",
-        "price": "15.99",
-        "compareAtPrice": "20.00",
-        "imageUrl": "https://i.pinimg.com/736x/de/5d/6c/de5d6cc6503af6160bff931956cba987.jpg"
-      },
-      {
-         "productId":"2",
-        "title": "Áo sơ mi cổ tàu",
-        "description": "Áo sơ mi cổ tàu chất liệu cotton cao cấp.",
-        "price": "25.50",
-        "compareAtPrice": "30.00",
-        "imageUrl": "https://i.pinimg.com/736x/55/0a/12/550a122a6b677c818d4c2545019e65c8.jpg"
-      },
-      {
-         "productId":"3",
-        "title": "Quần jeans giản dị",
-        "description": "Quần jeans dáng straight, dễ phối đồ.",
-        "price": "40.00",
-        "compareAtPrice": "50.00",
-        "imageUrl": "https://i.pinimg.com/736x/69/26/7b/69267bce1de448c6808b0d979b591226.jpg"
-      },
-      {
-        "productId":"4",
-        "title": "Váy mùa hè",
-        "description": "Váy nhẹ, phù hợp đi biển hoặc dạo phố.",
-        "price": "35.00",
-        "compareAtPrice": "45.00",
-        "imageUrl": "https://i.pinimg.com/736x/42/43/61/4243611e7db548da495b1024babad5c1.jpg"
-      },
-      {
-        "productId":"5",
-        "title": "Áo len trung bình",
-        "description": "Áo len dày, giữ ấm tốt cho mùa thu đông.",
-        "price": "22.00",
-        "compareAtPrice": "28.00",
-        "imageUrl": "https://i.pinimg.com/736x/1b/9b/f8/1b9bf8df5cd8f8c38dd5ed5e6f416ffa.jpg"
-      }
+  {
+    "productId": "1",
+    "title": "Áo thun basic 1",
+    "description": "Áo thun cotton mỏng, thoáng mát, phù hợp ngày hè.",
+    "price": "15.99",
+    "compareAtPrice": "20.00",
+    "imageUrl": "https://i.pinimg.com/736x/de/5d/6c/de5d6cc6503af6160bff931956cba987.jpg"
+  },
+  {
+    "productId": "2",
+    "title": "Áo sơ mi cổ tàu",
+    "description": "Áo sơ mi cổ tàu chất liệu cotton cao cấp.",
+    "price": "25.50",
+    "compareAtPrice": "30.00",
+    "imageUrl": "https://i.pinimg.com/736x/55/0a/12/550a122a6b677c818d4c2545019e65c8.jpg"
+  },
+  {
+    "productId": "3",
+    "title": "Quần jeans giản dị",
+    "description": "Quần jeans dáng straight, dễ phối đồ.",
+    "price": "40.00",
+    "compareAtPrice": "50.00",
+    "imageUrl": "https://i.pinimg.com/736x/69/26/7b/69267bce1de448c6808b0d979b591226.jpg"
+  },
+  {
+    "productId": "4",
+    "title": "Váy mùa hè",
+    "description": "Váy nhẹ, phù hợp đi biển hoặc dạo phố.",
+    "price": "35.00",
+    "compareAtPrice": "45.00",
+    "imageUrl": "https://i.pinimg.com/736x/42/43/61/4243611e7db548da495b1024babad5c1.jpg"
+  },
+  {
+    "productId": "5",
+    "title": "Áo len trung bình",
+    "description": "Áo len dày, giữ ấm tốt cho mùa thu đông.",
+    "price": "22.00",
+    "compareAtPrice": "28.00",
+    "imageUrl": "https://i.pinimg.com/736x/1b/9b/f8/1b9bf8df5cd8f8c38dd5ed5e6f416ffa.jpg"
+  }
 ]

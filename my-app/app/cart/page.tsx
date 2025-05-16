@@ -1,11 +1,8 @@
-import { CartDetails } from '@/components/cart'
-import React from 'react'
+import { CartDetails } from "@/components/cart";
+import React from "react";
 
 const Cart = async () => {
+  return <CartDetails />;
+};
 
-  return (
-    <CartDetails/>
-  )
-}
-
-export default Cart
+export default Cart;
