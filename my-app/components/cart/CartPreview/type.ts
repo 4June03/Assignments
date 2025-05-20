@@ -8,8 +8,8 @@ export interface CartContextType {
   handleRemoveFromCart: (productId: string) => void;
   handleAddToCart: (product: Product) => void;
   loadCart: () => void;
-  getCookiesData?: (key: string)=>any;
-  setCookiesData?: (key:string, data: any, expireTime: number)=>void;
+  getCookiesData?: (key: string)=>CartIem[];
+  setCookiesData?: (key:string, data: CartIem[], expireTime: number)=>void;
   handleChangeQuantity: (type:string, productId:string, value?:number) => void;
   isShowPreviewCart: boolean;
   toggleShowPreviewCart: () => void;

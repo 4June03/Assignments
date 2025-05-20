@@ -1,5 +1,4 @@
 import { Product } from "@/app/products/type";
-import { QuantitySelector } from "@/components/cart/CartPreviewItem/QuantitySelector";
 import { Button } from "@/components/ui/button";
 import React, { FC } from "react";
 

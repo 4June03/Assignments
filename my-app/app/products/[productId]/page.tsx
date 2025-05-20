@@ -1,21 +1,20 @@
 import { ProductDetails } from "@/components/products";
 
 import React from "react";
-import { Product } from "../type";
-import axios from "axios";
+import { getProductById } from "../service";
 
-const ProductDetailPage = async ({
-  params,
-}: {
-  params: { productId: string };
-}) => {
-  const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
-  const { productId } = params;
-  const res = await axios.get(
-    `${baseUrl}/api/get-products/${productId}`
-  );
-  const { product } = res.data;
+interface PageProps {
+  params: Promise<{
+    productId: string;
+  }>;
+}
+
+const ProductDetailPage = async ({ params }: PageProps) => {
+  const { productId } = await params;
+
+  const product = await getProductById(productId);
   console.log("product", product);
+
   return <ProductDetails product={product} />;
 };
 

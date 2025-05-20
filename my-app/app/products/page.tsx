@@ -1,12 +1,10 @@
 import React from "react";
-import { Product } from "./type";
 import { ProductGrid } from "@/components/products";
+import { getProducts } from "./service";
 
 const Page = async () => {
-  const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
-  const res = await fetch(`${baseUrl}/api/get-products`);
-  const products: Product[] = await res.json();
-  console.log("ds products", products);
+ 
+  const products = await getProducts();
 
   return (
     <div className="w-full mx-auto p-4">

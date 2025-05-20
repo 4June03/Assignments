@@ -25,7 +25,7 @@ export const ProductItem: FC<IProductItem> = ({ product }) => {
         </div>
         <div className="px-4 py-2">
           <h3 className="font-medium text-lg">{title}</h3>
-          <p className="mb-4 text-sm overflow-ellipsis line-clamp-2">
+          <p className="mb-4 text-sm overflow-ellipsis line-clamp-3">
             {description}
           </p>
         </div>

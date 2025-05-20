@@ -1,5 +1,5 @@
 "use client";
-import React, { FC, useContext, useEffect, useState } from "react";
+import React, { FC, useEffect } from "react";
 import { IoCloseSharp } from "react-icons/io5";
 import styles from "./CartPreview.module.css";
 import { Button } from "@/components/ui/button";

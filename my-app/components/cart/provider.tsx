@@ -52,9 +52,11 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
     console.log("data cart", cart);
     console.log("data index", existingIndex);
 
-    existingIndex !== -1
-      ? (cart[existingIndex].quantity += 1)
-      : cart.push({ ...product, quantity: 1 });
+    if (existingIndex !== -1) {
+      cart[existingIndex].quantity += 1;
+    } else {
+      cart.push({ ...product, quantity: 1 });
+    }
 
     toast.success("added to card");
     setIsShowPreviewCart(true);
@@ -65,7 +67,7 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
   };
 
   const handleRemoveFromCart = (productId: string) => {
-    const items: any[] = getCookiesData(CART_KEY);
+    const items: CartIem[] = getCookiesData(CART_KEY);
     const newCartItems = items.filter((item) => item.productId !== productId);
     setCookiesData(CART_KEY, newCartItems, 2);
     localStorage.setItem(CART_KEY, JSON.stringify(newCartItems));
@@ -113,7 +115,7 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
     return JSON.parse(Cookies.get(key) || "[]");
   };
 
-  const setCookiesData = (key: string, data: any, expireTime?: number) => {
+  const setCookiesData = (key: string, data: CartIem[], expireTime?: number) => {
     const stringTifiedData = JSON.stringify(data);
     Cookies.set(key, stringTifiedData, { expires: expireTime });
   };
